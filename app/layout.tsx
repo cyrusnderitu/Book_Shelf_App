@@ -1,12 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import ThemeContextProvider from "@/context/ThemeContext";
-
-const popps = Poppins({
-  subsets: ["devanagari"],
-  weight: ["100", "200", "400", "600"],
-});
+import ThemeOverlay from "@/components/ThemeOverlay";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,9 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="">
+    <html lang="en">
       <ThemeContextProvider>
-        <body className={popps.className}>{children}</body>
+        <body>
+          <ThemeOverlay>{children}</ThemeOverlay>
+        </body>
       </ThemeContextProvider>
     </html>
   );
