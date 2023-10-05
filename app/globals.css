@@ -19,3 +19,8 @@ html {
   -webkit-background-clip: text;
   text-transform: uppercase;
 }
+.bgImg {
+  background-image: url(../public/blue-abstract-watercolor-background-design-png-free-vector.jpg);
+  background-position: center;
+  background-size: cover;
+}

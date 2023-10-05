@@ -6,7 +6,7 @@ import { BiBookReader } from "react-icons/bi";
 
 const Navbar2 = () => {
   return (
-    <div className="navbar bg-base-100 font-popps sticky">
+    <div className="navbar bg-base-100 font-popps z-10">
       <div className="flex-1">
         <Link href={"/"}>
           <div className="flex items-center gap-x-3">
@@ -20,7 +20,7 @@ const Navbar2 = () => {
           <input
             type="text"
             placeholder="Search"
-            className="input input-bordered w-24 md:w-auto"
+            className="input input-bordered w-24 md:w-auto sm:hidden lg:block"
           />
         </div>
         <div className="dropdown dropdown-end">
@@ -31,7 +31,7 @@ const Navbar2 = () => {
           </label>
           <ul
             tabIndex={0}
-            className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+            className="mt-3 z-[10] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
           >
             <li>
               <a className="justify-between">

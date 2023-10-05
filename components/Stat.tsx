@@ -2,7 +2,7 @@ import React from "react";
 
 const Stat = () => {
   return (
-    <div className="stats stats-vertical lg:stats-horizontal shadow">
+    <div className="stats stats-horizontal shadow">
       <div className="stat">
         <div className="stat-title">Downloads</div>
         <div className="stat-value text-red-400">31K</div>
