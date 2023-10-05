@@ -3,3 +3,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(91, 222, 91);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+}

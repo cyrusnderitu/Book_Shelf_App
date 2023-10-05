@@ -5,12 +5,12 @@ import Theme from "@/components/Theme";
 export default function Home() {
   return (
     <div className="h-screen">
-      <div className="cont px-10 h-full relative">
+      <div className="cont px-10 relative h-full">
         <Navbar />
-        <div className="absolute bottom-10 right-4">
+        <Hero />
+        <div className="absolute bottom-10 right-8">
           <Theme />
         </div>
-        <Hero />
       </div>
     </div>
   );

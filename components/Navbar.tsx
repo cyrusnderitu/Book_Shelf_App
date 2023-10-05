@@ -21,9 +21,12 @@ const Navbar = () => {
               <a>Home</a>
             </li>
             <li>
+              <a>Activites</a>
+            </li>
+            <li>
               <details>
                 <summary>Genre</summary>
-                <ul className={`p-2 bg-base-200`}>
+                <ul className={`p-2 bg-base-200 z-10`}>
                   <li>
                     <a>Horror</a>
                   </li>
@@ -40,9 +43,6 @@ const Navbar = () => {
               </details>
             </li>
             <li>
-              <a>About</a>
-            </li>
-            <li>
               <a>Contact</a>
             </li>
           </ul>
@@ -50,7 +50,7 @@ const Navbar = () => {
             <button className="btn btn-outline btn-success rounded-[20px] flex items-center gapx-3 font-bold">
               {/* <AiFillBook className="text-xl" /> */}
               <Image src={Book} alt="book" />
-              Add Book
+              LIBRARY
             </button>
           </Link>
         </div>
