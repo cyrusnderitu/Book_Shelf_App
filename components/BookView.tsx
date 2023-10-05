@@ -17,10 +17,8 @@ const BookView = () => {
           />
           <div>
             <h1 className="text-4xl font-bold">The Psychology of Money</h1>
-            <p className="py-6 w-3/5 text-[14px]">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+            <p className="py-6 text-[14px]">
+              Author: <span className="uppercase font-bold">morgan Housel</span>
             </p>
             <div className="flex items-center gap-x-4">
               <div className="rating rating-sm">
@@ -55,12 +53,12 @@ const BookView = () => {
                 2.85 <span className="text-base">(35 rating)</span>
               </h4>
             </div>
-            <div className="badge badge-success gap-2 my-4">
+            <div className="badge badge-warning gap-2 my-4">
               <p className="font-semi-bold"># Top 50 in Ranking</p>
             </div>
             <div className="flex items-center gap-x-2 ">
               <button className="btn btn-success btn-outline">Read</button>
-              <button className="btn btn-primary flex items-center gap-x-2">
+              <button className="btn btn-success flex items-center gap-x-2">
                 <AiOutlinePlusSquare />
                 Add to Collection
               </button>
