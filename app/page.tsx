@@ -9,7 +9,7 @@ export default function Home() {
       <div className="cont h-screen relative">
         <Navbar />
         <Hero />
-        <div className="absolute bottom-10 right-8">
+        <div className=" bottom-20 right-10 z-20 fixed">
           <Theme />
         </div>
       </div>

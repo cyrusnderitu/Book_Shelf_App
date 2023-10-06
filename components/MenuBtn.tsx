@@ -3,7 +3,7 @@ import React from "react";
 const MenuBtn = () => {
   return (
     <div>
-      <label className="btn btn-circle swap swap-rotate">
+      <label className="btn btn-circle swap swap-rotate bg-red-300">
         {/* this hidden checkbox controls the state */}
         <input type="checkbox" />
 

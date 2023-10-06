@@ -21,23 +21,23 @@ const Navbar = () => {
               <a>Home</a>
             </li>
             <li>
-              <a>Activites</a>
+              <a>Join a Club</a>
             </li>
             <li>
               <details>
-                <summary>Genre</summary>
+                <summary>Community</summary>
                 <ul className={`p-2 bg-base-200 z-10`}>
                   <li>
-                    <a>Horror</a>
+                    s<a>Forum</a>
                   </li>
                   <li>
-                    <a>Sci-fi</a>
+                    <a>Hangouts</a>
                   </li>
                   <li>
-                    <a>Romance</a>
+                    <a>Events</a>
                   </li>
                   <li>
-                    <a>Action</a>
+                    <a>Galery</a>
                   </li>
                 </ul>
               </details>

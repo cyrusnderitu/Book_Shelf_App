@@ -2,8 +2,8 @@ import Image from "next/image";
 import React from "react";
 import Cover from "../public/photo-1592496431122-2349e0fbc666.jpg";
 import { AiOutlinePlusSquare } from "react-icons/ai";
-import Bg from "../public/blue-abstract-watercolor-background-design-png-free-vector.jpg";
 import BookCard from "./BookCard";
+import BookAbout from "./BookAbout";
 
 const BookView = () => {
   return (
@@ -66,10 +66,11 @@ const BookView = () => {
           </div>
         </div>
       </div>
-      <div className=" mt-10 h-[500px]">
+      <div className=" mt-10">
         <div className="tabs">
           <a className="tab tab-lifted tab-active">About</a>
           <a className="tab tab-lifted ">Table of Content</a>
+          <BookAbout />
         </div>
       </div>
       <div className="my-6">

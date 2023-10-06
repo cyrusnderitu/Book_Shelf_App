@@ -89,7 +89,9 @@ const Sidebar = () => {
           #There is never an ending to Knowledge#
         </p>
         <Image src={SideImg} alt="image" className="w-[250px]" />
-        <button className="btn btn-success mt-4 w-full">Subscribe</button>
+        <button className="btn btn-success mt-4 w-full bg-[#5BD35B]">
+          Subscribe
+        </button>
       </div>
     </div>
   );
