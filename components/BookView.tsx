@@ -16,7 +16,9 @@ const BookView = () => {
             className="mask mask-hexagon w-[500px] shadow-sm"
           />
           <div>
-            <h1 className="text-4xl font-bold">The Psychology of Money</h1>
+            <h1 className="text-4xl font-bold stroke">
+              The Psychology of Money
+            </h1>
             <p className="py-6 text-[14px]">
               Author: <span className="uppercase font-bold">morgan Housel</span>
             </p>

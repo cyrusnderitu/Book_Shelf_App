@@ -28,7 +28,7 @@ const Navbar = () => {
                 <summary>Community</summary>
                 <ul className={`p-2 bg-base-200 z-10`}>
                   <li>
-                    s<a>Forum</a>
+                    <a>Forum</a>
                   </li>
                   <li>
                     <a>Hangouts</a>
@@ -37,7 +37,7 @@ const Navbar = () => {
                     <a>Events</a>
                   </li>
                   <li>
-                    <a>Galery</a>
+                    <a>Gallery</a>
                   </li>
                 </ul>
               </details>
