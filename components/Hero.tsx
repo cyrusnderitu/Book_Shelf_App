@@ -31,7 +31,12 @@ const Hero = () => {
       </div>
       <div className="right  flex justify-center items-center">
         <div className="w-4/5 h-[90%]  shadow-sm rounded-md px-4 flex justify-center items-center relative">
-          <Image src={Reader} alt="reader" className="w-[550px] mt-8" />
+          <Image
+            src={Reader}
+            alt="reader"
+            className="w-[550px] mt-8"
+            priority={false}
+          />
           <Image
             src={Clock}
             alt="reader"

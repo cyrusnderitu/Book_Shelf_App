@@ -1,18 +1,20 @@
-import Image from "next/image";
 import React from "react";
-import Book from "../public/casual-life-3d-three-quarter-back-view-book-cover-mockup.png";
+import Image from "next/image";
 import Link from "next/link";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import { BookType } from "@/app/form/page";
 
-const BookCard = () => {
+const BookCard: React.FC<BookType> = ({ name, cover, book_id }) => {
   return (
     <div className="card w-[240px] bg-base-100 shadow-xl">
       <figure className="mt-4">
-        <Image src={Book} alt="coverImg" className="w-[100px]" />
+        <Image src={cover} alt="coverImg" width={100} height={100} />
       </figure>
       <div className="card-body">
-        <Link href={"/form/1"}>
-          <h2 className="card-title flex items-center gap-x-2 text-[16px] font-bold">
-            Harry Potter
+        <Link href={`/form/${book_id}`}>
+          <h2 className="card-title flex flex-col items-start gap-x-2 text-[15px] font-bold">
+            {name || <Skeleton />}
             <span className="badge badge-warning text-[10px]">NEW</span>
           </h2>
         </Link>

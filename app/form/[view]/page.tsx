@@ -4,7 +4,7 @@ import Navbar2 from "@/components/Navbar2";
 import Theme from "@/components/Theme";
 import React from "react";
 
-const page = () => {
+const Book = () => {
   return (
     <div className="px-10 relative">
       <Navbar2 />
@@ -17,4 +17,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Book;

@@ -1,11 +1,28 @@
+"use client";
+import { useEffect } from "react";
 import Image from "next/image";
 import React from "react";
 import Cover from "../public/photo-1592496431122-2349e0fbc666.jpg";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import BookCard from "./BookCard";
-import BookAbout from "./BookAbout";
+import Tabs from "./Tabs";
+import { useParams } from "next/navigation";
+import { fetchBookById } from "@/hooks/fetchData";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState, AppDispatch } from "@/redux/store";
 
 const BookView = () => {
+  const { view } = useParams();
+  const { book: book } = useSelector(
+    (state: RootState) => state.reducer.bookById
+  );
+  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    dispatch(fetchBookById("56597885"));
+  }, [dispatch, view]);
+  const obj = { ...book };
+
+  console.log(obj);
   return (
     <div className="">
       <div className="hero w-[calc(100%+5rem)] -ml-10 font-popps bgImg bg-base-200">
@@ -68,26 +85,11 @@ const BookView = () => {
           </div>
         </div>
       </div>
-      <div className=" mt-10">
-        <div className="tabs">
-          <a className="tab tab-lifted tab-active">About</a>
-          <a className="tab tab-lifted ">Table of Content</a>
-          <BookAbout />
-        </div>
-      </div>
+      <Tabs />
       <div className="my-6">
         <h4 className="text-3xl mb-3 text-bold">You May Also Like</h4>
 
-        <div className="flex flex-wrap gap-4">
-          <BookCard />
-          <BookCard />
-          <BookCard />
-          <BookCard />
-          <BookCard />
-          <BookCard />
-          <BookCard />
-          <BookCard />
-        </div>
+        <div className="flex flex-wrap gap-4"></div>
       </div>
     </div>
   );
