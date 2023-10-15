@@ -4,7 +4,6 @@ import Image from "next/image";
 import React from "react";
 import Cover from "../public/photo-1592496431122-2349e0fbc666.jpg";
 import { AiOutlinePlusSquare } from "react-icons/ai";
-import BookCard from "./BookCard";
 import Tabs from "./Tabs";
 import { useParams } from "next/navigation";
 import { fetchBookById } from "@/hooks/fetchData";
@@ -12,29 +11,30 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState, AppDispatch } from "@/redux/store";
 
 const BookView = () => {
-  const { view } = useParams();
-  const { book: book } = useSelector(
-    (state: RootState) => state.reducer.bookById
-  );
+  const { book_id } = useParams();
+  const { book } = useSelector((state: RootState) => state.reducer.bookById);
   const dispatch = useDispatch<AppDispatch>();
-  useEffect(() => {
-    dispatch(fetchBookById("56597885"));
-  }, [dispatch, view]);
-  const obj = { ...book };
 
-  console.log(obj);
+  useEffect(() => {
+    console.log(book_id);
+
+    dispatch(fetchBookById(book_id));
+  }, [dispatch, book_id]);
+
+  console.log(book_id);
+  console.log(book);
   return (
     <div className="">
       <div className="hero w-[calc(100%+5rem)] -ml-10 font-popps bgImg bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
           <Image
-            src={Cover}
+            src={book?.cover || Cover}
             alt="cover"
             className="mask mask-hexagon w-[500px] shadow-sm"
           />
           <div>
             <h1 className="text-4xl font-bold stroke">
-              The Psychology of Money
+              {book?.name || "The Psychology of Money"}
             </h1>
             <p className="py-6 text-[14px]">
               Author: <span className="uppercase font-bold">morgan Housel</span>
