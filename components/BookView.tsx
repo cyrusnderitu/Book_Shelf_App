@@ -15,11 +15,10 @@ const BookView = () => {
   const { book } = useSelector((state: RootState) => state.reducer.bookById);
   const dispatch = useDispatch<AppDispatch>();
 
+  const bookId = Number(book_id);
   useEffect(() => {
-    console.log(book_id);
-
-    dispatch(fetchBookById(book_id));
-  }, [dispatch, book_id]);
+    dispatch(fetchBookById(bookId));
+  }, [dispatch, bookId]);
 
   console.log(book_id);
   console.log(book);
